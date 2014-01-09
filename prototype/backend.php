@@ -1,7 +1,8 @@
-<?
+<?php
 
 // --- config start -> move to config.inc.php ? ---
-
+// BitMatrix: move configuration to config/config.php
+ 
 // OpenDNSSEC configuration file containing the zone list
 $zonelist = 'zonelist.xml';
 
@@ -23,7 +24,9 @@ $zone_list = array();
 // Walk all zone tags
 foreach ($result as $r) {
 	// extract zone name
-	$zone_name = (string)$r->attributes()['name'];
+	$attrList = $r->attributes();
+	$zone_name = $attrList['name'];
+	
 	// add to result
 	$zone_list[$zone_name] = $r;
 }
@@ -38,5 +41,4 @@ print_r($zone_list);
 echo json_encode($zone_list);
 
 // TODO: one file per action? or one file calling methods?
-
-?>
+// BitMatrix: simple request dispatcher, one Class per action 
