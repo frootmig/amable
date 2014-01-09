@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZoneList>
+	<!--
+	<Zone name="example.com">
+		<Policy>default</Policy>
+		<SignerConfiguration>/var/lib/opendnssec/signconf/example.com.xml</SignerConfiguration>
+		<Adapters>
+			<Input>
+				<Adapter type="File">/var/lib/opendnssec/unsigned/example.com</Adapter>
+			</Input>
+			<Output>
+				<Adapter type="File">/var/lib/opendnssec/signed/example.com</Adapter>
+			</Output>
+		</Adapters>
+	</Zone>
+-->
+	<!--
+	<Zone name="example.net">
+		<Policy>default</Policy>
+		<SignerConfiguration>/var/lib/opendnssec/signconf/example.net.xml</SignerConfiguration>
+		<Adapters>
+			<Input>
+				<Adapter type="DNS">/etc/opendnssec/addns.xml</Adapter>
+			</Input>
+			<Output>
+				<Adapter type="DNS">/etc/opendnssec/addns.xml</Adapter>
+			</Output>
+		</Adapters>
+	</Zone>
+-->
+	<Zone name="test2.com">
+		<Policy>default</Policy>
+		<SignerConfiguration>/var/lib/opendnssec/signconf/test2.com.xml</SignerConfiguration>
+		<Adapters>
+			<Input>
+				<Adapter type="File">/var/lib/opendnssec/unsigned/test2.com</Adapter>
+			</Input>
+			<Output>
+				<Adapter type="File">/var/lib/opendnssec/signed/test2.com</Adapter>
+			</Output>
+		</Adapters>
+	</Zone>
+	<Zone name="test1.com">
+		<Policy>default</Policy>
+		<SignerConfiguration>/var/lib/opendnssec/signconf/test1.com.xml</SignerConfiguration>
+		<Adapters>
+			<Input>
+				<Adapter type="File">/var/lib/opendnssec/unsigned/test1.com</Adapter>
+			</Input>
+			<Output>
+				<Adapter type="File">/var/lib/opendnssec/signed/test1.com</Adapter>
+			</Output>
+		</Adapters>
+	</Zone>
+</ZoneList>
